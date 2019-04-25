@@ -5,7 +5,7 @@ import pandas as pd
 plt.figure(figsize=(8, 5))
 
 x = np.linspace(1, 31, 744)
-y = np.arange(1,745)
+y = pd.read_excel('Data/DST.xlsx')
 
 plt.plot(x, y, 'b')
 plt.xlabel('March 2015')
