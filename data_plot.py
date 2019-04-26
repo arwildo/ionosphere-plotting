@@ -1,24 +1,14 @@
-import matplotlib.pyplot as plt 
-import numpy as np 
+import matplotlib.pyplot as plt
+import pandas as pd
+import matplotlib.dates as mdates
 
-plt.figure(figsize = (5, 5))
+times = pd.date_range('2015-10-06', periods=500, freq='10min')
 
-plt.subplot(2, 1, 1)
-x = [1, 2, 3, 4, 5]
-y = [1, 4, 9, 16, 32]
-x2 = np.arange(1, 6)
-y2 = x2 * np.pi
-plt.plot(x, y, 'b',  x2, y2, 'r')
+fig, ax = plt.subplots(1)
+fig.autofmt_xdate()
+plt.plot(times, range(times.size))
 
-plt.ylabel('Sumbu Y')
-plt.title('Graph')
-plt.subplot(2, 1, 2)
-x = [1, 2, 3, 4, 5]
-y = [1, 4, 9, 16, 32]
-x2 = np.arange(1, 6)
-y2 = x2 * np.pi
-plt.plot(x, y, 'b',  x2, y2, 'r')
+xfmt = mdates.DateFormatter('%d-%m-%y %H:%M')
+ax.xaxis.set_major_formatter(xfmt)
 
-plt.xlabel('Sumbu X')
-plt.ylabel('Sumbu Y')
 plt.show()
