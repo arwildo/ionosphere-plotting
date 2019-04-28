@@ -15,7 +15,7 @@ x = [customdate + datetime.timedelta(hours=i) for i in range(len(y))]
 formatter = mdates.DateFormatter('%d')
 
 #plot
-plt.figure(figsize=(9, 5))
+plt.figure(figsize=(10, 5))
 plt.plot(x, y, 'r', linewidth=0.75)
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 plt.xlabel('March 2015')
