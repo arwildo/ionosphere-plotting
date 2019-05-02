@@ -13,7 +13,7 @@ fig.set_figwidth(10)
 ax = fig.add_subplot(111)
 
 #initialize variables
-yo = pd.read_csv('data/csvfile.csv', delimiter=',', header=None)
+yo = pd.read_csv('data/DST.csv', delimiter=',', header=None)
 y = yo.values.tolist()
 x = [customdate + datetime.timedelta(hours=i) for i in range(len(y))]
 
