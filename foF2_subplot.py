@@ -18,7 +18,7 @@ formatter = mdates.DateFormatter('%d')
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 plt.plot(x1, y1, 'b', linewidth=0.75)
 plt.ylabel('foF2 $(Mhz)$')
-
+plt.grid(linestyle='dotted')
 
 #initialize variables Subplot DST
 y2 = pd.read_excel('Data/fof2_subplot.xlsx')
@@ -32,6 +32,6 @@ plt.gcf().axes[1].xaxis.set_major_formatter(formatter)
 plt.plot(x2, y2, 'b', linewidth=0.75)
 plt.xlabel('March 2015')
 plt.ylabel('foF2 $(Mhz)$')
-
+plt.grid(linestyle='dotted')
 
 plt.show()
