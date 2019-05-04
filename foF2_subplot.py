@@ -1,11 +1,10 @@
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-import numpy as np 
-import pandas as pd 
+import numpy as np
+import pandas as pd
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 import datetime
-
 
 #initialize variables Main DST
 y1 = pd.read_excel('Data/fof2.xlsx')
