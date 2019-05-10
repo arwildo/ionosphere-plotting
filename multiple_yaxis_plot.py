@@ -2,17 +2,17 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import numpy as np
 import pandas as pd
+import datetime
 from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
-import datetime
 
-#initialize variables
+# initialize variables
 y1 = pd.read_excel('data/Dst_subplot.xlsx', delimiter=',', header=None)
 y2 = pd.read_excel('data/fof2_subplot.xlsx', delimiter=',', header=None)
-customdate = datetime.datetime(2015, 3, 15, 0)  #date start
+customdate = datetime.datetime(2015, 3, 15, 0)  # date start
 x = [customdate + datetime.timedelta(hours=i) for i in range(len(y1))]
 
-#plot config
+# plot config
 fig, host = plt.subplots(figsize=(10, 5))
 plt.grid(linestyle='dotted')
 par1 = host.twinx()
