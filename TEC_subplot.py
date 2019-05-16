@@ -34,7 +34,7 @@ plt.grid(linestyle='dotted')
 
 #subplot foF2 zoomin
 ax2 = plt.subplot(gs[1])
-formatter = mdates.DateFormatter('%d')
+formatter = mdates.DateFormatter('%d %H')
 plt.gcf().axes[1].xaxis.set_major_formatter(formatter)
 plt.plot(x2, y2, 'black', linewidth=0.75)
 plt.xlabel('March 2015')
