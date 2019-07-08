@@ -7,20 +7,24 @@ from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
 # initialize variables
-y1 = pd.read_excel('data/Dst_subplot.xlsx', delimiter=',', header=None)
-y2 = pd.read_excel('data/fof2_subplot.xlsx', delimiter=',', header=None)
-y3 = pd.read_excel('data/fof2_median.xlsx', delimiter=',', header=None)
-customdate = datetime.datetime(2015, 3, 15, 0)  # date start
+y1 = pd.read_excel('data/Dst_subplot17_21.xlsx', delimiter=',', header=None)
+y2 = pd.read_excel('data/fof2_subplot17_21.xlsx', delimiter=',', header=None)
+y3 = pd.read_excel('data/fof2_median17_21.xlsx', delimiter=',', header=None)
+customdate = datetime.datetime(2015, 3, 17, 0)  # date start
 x = [customdate + datetime.timedelta(hours=i) for i in range(len(y1))]
 
 # plot config
-fig, host = plt.subplots(figsize=(10, 5))
+fig, host = plt.subplots(figsize=(14, 7))
 plt.grid(linestyle='-')
 par1 = host.twinx()
 
 p1, = host.plot(x, y1, "r-", label="DST")
 p2, = par1.plot(x, y2, "b-", label="foF2")
 p3, = par1.plot(x, y3, "lime", label="Median foF2")
+
+# add minor grid
+host.minorticks_on()
+par1.minorticks_on()
 
 host.set_xlabel("Maret 2015")
 host.set_ylabel("Indeks DST $(nT)$")
@@ -39,5 +43,8 @@ lines = [p1, p2, p3]
 host.legend(lines, [l.get_label() for l in lines], loc='lower right')
 formatter = mdates.DateFormatter('%d')
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
+
+# minor grid activated
+host.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
 
 plt.show()

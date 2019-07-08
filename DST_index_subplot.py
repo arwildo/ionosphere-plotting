@@ -20,9 +20,9 @@ x2 = [customdate + datetime.timedelta(hours=i) for i in range(len(y2))]
 
 fig = plt.figure(figsize=(8, 5))
 gs = gridspec.GridSpec(2, 1,
-                   	#	width_ratios=[1, 2],
-                    	height_ratios=[2, 3]
-                       )
+                  #	width_ratios=[1, 2],
+                  #	height_ratios=[2, 3]
+                     )
 
 #subplot main DST
 ax = plt.subplot(gs[0])
@@ -30,15 +30,15 @@ formatter = mdates.DateFormatter('%d')
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 plt.plot(x1, y1, 'r', linewidth=0.75)
 plt.ylabel('DST Index $(nT)$')
-plt.grid(linestyle='dotted')
+plt.grid(linestyle='-')
 
 #subplot DST zoomin
 ax2 = plt.subplot(gs[1])
 formatter = mdates.DateFormatter('%d')
 plt.gcf().axes[1].xaxis.set_major_formatter(formatter)
 plt.plot(x2, y2, 'r', linewidth=0.75)
-plt.xlabel('March 2015')
-plt.ylabel('DST Index $(nT)$')
-plt.grid(linestyle='dotted')
+plt.xlabel('Maret 2015')
+plt.ylabel('Indeks DST $(nT)$')
+plt.grid(linestyle='-')
 
 plt.show()

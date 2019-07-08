@@ -13,7 +13,7 @@ fig.set_figwidth(10)
 ax = fig.add_subplot(111)
 
 # initialize variables
-yo = pd.read_csv('data/DST.csv', delimiter=',', header=None)
+yo = pd.read_excel('data/DST.xlsx', delimiter=',', header=None)
 y = yo.values.tolist()
 x = [customdate + datetime.timedelta(hours=i) for i in range(len(y))]
 
@@ -41,5 +41,6 @@ plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 plt.xlabel('March 2015')
 plt.ylabel('DST Index (nT)')
 ax.set_ylim(-300, 70)
+plt.grid(linestyle='dotted')
 
 plt.show()

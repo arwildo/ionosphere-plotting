@@ -19,9 +19,9 @@ fig, host = plt.subplots(figsize=(9, 4))
 plt.grid(linestyle='dotted')
 
 p1, = host.plot(x, y1, "black", label="TEC")
-p2, = host.plot(x, y2, "lime", label="median")
+p2, = host.plot(x, y2, "gold", label="Median TEC")
 
-host.set_xlabel("March 2015")
+host.set_xlabel("Maret 2015")
 host.set_ylabel("TEC $(TECU)$")
 
 host.yaxis.label.set_color('black')
