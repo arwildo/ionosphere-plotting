@@ -17,7 +17,7 @@ fig, host = plt.subplots(figsize=(9, 4))
 plt.grid(linestyle='-')
 
 p1, = host.plot(x, y1, "black", label="TEC")
-p2, = host.plot(x, y2, "gold", label="Median TEC")
+p2, = host.plot(x, y2, "darkorange", label="Median TEC")
 
 host.set_xlabel("Maret 2015")
 host.set_ylabel("TEC $(TECU)$")
