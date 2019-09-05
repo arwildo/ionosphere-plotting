@@ -9,9 +9,9 @@ Used on my research paper on Atmospheric Science topic.
 
 ## Built With
 
-* Numpy
-* Pandas
-* MatPlotLib
+* [Numpy](https://github.com/numpy/numpy)
+* [Pandas](https://github.com/pandas-dev/pandas)
+* [MatPlotLib](https://github.com/matplotlib/matplotlib)
 
 ## Contributors
 
