@@ -6,3 +6,13 @@ Used on my research paper on Atmospheric Science topic.
 
 ## Preview
 ![alt text](https://raw.githubusercontent.com/arwildo/ionosphere-plotting/master/preview/ionosphere-plotting-preview.png "Graphs Preview")
+
+## Built With
+
+* Numpy
+* Pandas
+* MatPlotLib
+
+## Contributors
+
+* **Arwildo** - *Initial work* - [arwildo.space](http://www.arwildo.space/)
