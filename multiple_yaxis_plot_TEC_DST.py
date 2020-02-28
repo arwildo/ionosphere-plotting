@@ -36,7 +36,9 @@ host.tick_params(axis='x', **tkw)
 
 lines = [p1, p2, p3]
 
-host.legend(lines, [l.get_label() for l in lines], loc='lower right', prop={'size': 8.5})
+host.legend(lines, [l.get_label() for l in lines],
+            loc='lower right',
+            prop={'size': 8.5})
 formatter = mdates.DateFormatter('%d')
 plt.gcf().axes[0].xaxis.set_major_formatter(formatter)
 
