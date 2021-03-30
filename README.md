@@ -6,7 +6,7 @@ Used on my research paper on Atmospheric Science topic.
 
 
 ## Preview
-![alt text](https://arwildo.github.io/assets/images/ionosphere-plotting.png "Graphs Preview")
+![alt text](https://arwildo.com/assets/images/ionosphere-plotting.png "Graphs Preview")
 
 
 ## Built With
